@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "93ce94ca-4eae-4b13-aa0c-c5792a86a9bb",
+		"name": "neutrinos-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1120098"
+	},
+	"item": [
+		{
+			"name": "Parse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0'?><!-- This file represents a fragment of a book store database. --><bookstore specialty='novel'><book style='autobiography'><title>Seven Years in Trenton</title><author><first-name>Joe</first-name><last-name>Bob</last-name><award>Trenton Literary Review Honorable Mention</award></author><price>12</price></book><book style='textbook'><title>History of Trenton</title><author><first-name>Mary</first-name><last-name>Bob</last-name><publication>Selected Short Stories of<first-name>Mary</first-name> <last-name>Bob</last-name></publication></author><price>55</price></book><magazine style='glossy' frequency='monthly'><title>Tracking Trenton</title><price>2.50</price><subscription price='24' per='year'/></magazine><book style='novel' id='myfave'><title>Trenton Today, Trenton Tomorrow</title><author><first-name>Toni</first-name><last-name>Bob</last-name><degree from='Trenton U'>B.A.</degree><degree from='Harvard'>Ph.D.</degree><award>Pulitzer</award><publication>Still in Trenton</publication><publication>Trenton Forever</publication></author><price intl='canada' exchange='0.7'>6.50</price><excerpt><p>It was a dark and stormy night.</p><p>But then all nights in Trenton seem dark andstormy to someone who has gone through what<emph>I</emph> have.</p><definition-list><term>Trenton</term><definition>misery</definition></definition-list></excerpt></book><my:book style='leather' price='29.50' xmlns:my='http://www.placeholder -name-here.com/schema/'><my:title>Who's Who in Trenton</my:title><my:author>Robert Bob</my:author></my:book></bookstore>"
+				},
+				"url": {
+					"raw": "http://localhost:3000/parse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"parse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Parse-Optimized",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const inputData = \"<?xml version='1.0'?><!-- This file represents a fragment of a book store database. --><bookstore specialty='novel'><book style='autobiography'><title>Seven Years in Trenton</title><author><first-name>Joe</first-name><last-name>Bob</last-name><award>Trenton Literary Review Honorable Mention</award></author><price>12</price></book><book style='textbook'><title>History of Trenton</title><author><first-name>Mary</first-name><last-name>Bob</last-name><publication>Selected Short Stories of<first-name>Mary</first-name> <last-name>Bob</last-name></publication></author><price>55</price></book><magazine style='glossy' frequency='monthly'><title>Tracking Trenton</title><price>2.50</price><subscription price='24' per='year'/></magazine><book style='novel' id='myfave'><title>Trenton Today, Trenton Tomorrow</title><author><first-name>Toni</first-name><last-name>Bob</last-name><degree from='Trenton U'>B.A.</degree><degree from='Harvard'>Ph.D.</degree><award>Pulitzer</award><publication>Still in Trenton</publication><publication>Trenton Forever</publication></author><price intl='canada' exchange='0.7'>6.50</price><excerpt><p>It was a dark and stormy night.</p><p>But then all nights in Trenton seem dark andstormy to someone who has gone through what<emph>I</emph> have.</p><definition-list><term>Trenton</term><definition>misery</definition></definition-list></excerpt></book><my:book style='leather' price='29.50' xmlns:my='http://www.placeholder -name-here.com/schema/'><my:title>Who's Who in Trenton</my:title><my:author>Robert Bob</my:author></my:book></bookstore>\";\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0'?><!-- This file represents a fragment of a book store database. --><bookstore specialty='novel'><book style='autobiography'><title>Seven Years in Trenton</title><author><first-name>Joe</first-name><last-name>Bob</last-name><award>Trenton Literary Review Honorable Mention</award></author><price>12</price></book><book style='textbook'><title>History of Trenton</title><author><first-name>Mary</first-name><last-name>Bob</last-name><publication>Selected Short Stories of<first-name>Mary</first-name> <last-name>Bob</last-name></publication></author><price>55</price></book><magazine style='glossy' frequency='monthly'><title>Tracking Trenton</title><price>2.50</price><subscription price='24' per='year'/></magazine><book style='novel' id='myfave'><title>Trenton Today, Trenton Tomorrow</title><author><first-name>Toni</first-name><last-name>Bob</last-name><degree from='Trenton U'>B.A.</degree><degree from='Harvard'>Ph.D.</degree><award>Pulitzer</award><publication>Still in Trenton</publication><publication>Trenton Forever</publication></author><price intl='canada' exchange='0.7'>6.50</price><excerpt><p>It was a dark and stormy night.</p><p>But then all nights in Trenton seem dark andstormy to someone who has gone through what<emph>I</emph> have.</p><definition-list><term>Trenton</term><definition>misery</definition></definition-list></excerpt></book><my:book style='leather' price='29.50' xmlns:my='http://www.placeholder -name-here.com/schema/'><my:title>Who's Who in Trenton</my:title><my:author>Robert Bob</my:author></my:book></bookstore>"
+				},
+				"url": {
+					"raw": "http://localhost:3001/parse/optimized",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"parse",
+						"optimized"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
