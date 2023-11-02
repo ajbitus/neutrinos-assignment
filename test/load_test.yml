@@ -1,0 +1,25 @@
+# For Artillery Load Testing
+config:
+ target: http://localhost:3000
+ phases:
+  - duration: 20
+    arrivalRate: 5
+    maxVusers: 10
+    name: Startup phase
+plugins:
+ ensure: {}
+ expect:
+  expectDefault200: true
+ensure:
+ thresholds:
+  - http.response_time.max: 1000
+ conditions:
+  - expression: "http.codes.200 == http.requests"
+scenarios:
+ - flow:
+    - post:
+       url: "/parse"
+       expect:
+        - statusCode: 200
+        - notStatusCode: 400
+        - contentType: json
